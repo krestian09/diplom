@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/dailyStatisticFragment"
+            android:title="@string/statistic"/>
+
+    <item
+            android:id="@+id/dishesCollectionsFragment"
+            android:title="@string/dishes"/>
+    <item
+        android:id="@+id/accountFragment"
+        android:title="@string/account"/>
+</menu>

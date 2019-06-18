@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_graph"
+            app:startDestination="@+id/signInFragment">
+
+    <fragment
+            android:id="@+id/signInFragment"
+            tools:layout="@layout/fragment_sign_in"
+            android:name="com.example.calorieassistant.sign.in.SignInFragment"
+            android:label="SignInFragment">
+        <action
+                android:id="@+id/action_signInFragment_to_signUpFragment"
+                app:destination="@id/signUpFragment"
+                app:popUpTo="@id/signInFragment"
+                app:popUpToInclusive="true"/>
+        <action
+                android:id="@+id/action_signInFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:popUpTo="@id/signInFragment"
+                app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+            android:id="@+id/signUpFragment"
+            tools:layout="@layout/fragment_sign_up"
+            android:name="com.example.calorieassistant.sign.up.SignUpFragment"
+            android:label="SignUpFragment">
+        <action
+                android:id="@+id/action_signUpFragment_to_personalInfoRegistration"
+                app:destination="@id/personalInfoRegistration"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/signUpFragment"
+                app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+            android:id="@+id/personalInfoRegistration"
+            tools:layout="@layout/fragment_personal_info_registration"
+            android:name="com.example.calorieassistant.personal.PersonalInfoRegistration"
+            android:label="PersonalInfoRegistration">
+        <action
+                android:id="@+id/action_personalInfoRegistration_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:popUpTo="@+id/mainFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/mainFragment"
+            tools:layout="@layout/fragment_main"
+            android:name="com.example.calorieassistant.main.MainFragment"
+            android:label="MainFragment"/>
+    <action
+            android:id="@+id/action_global_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@+id/signInFragment"/>
+
+</navigation>
